@@ -16,5 +16,17 @@ namespace ejercicios
         {
             InitializeComponent();
         }
+
+        private void lbledad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncomprobar_Click(object sender, EventArgs e)
+        {
+            int edad = int.Parse(txtedad.Text);
+            if (edad >= 18) ;
+            MessageBox.Show("Bienvenido, eres responsable por tus acciones"); 
+        }
     }
 }
