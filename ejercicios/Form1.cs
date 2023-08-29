@@ -42,18 +42,27 @@ namespace ejercicios
             int de = 0, a = 0;
             double cantidad = 0, respuesta = 0;
 
-            de = cbodeconversores.SelectedIndex;
-            a = cboaconversores.SelectedIndex;
+            de = cbodeconversoresParcial.SelectedIndex;
+            a = cboaconversoresParcial.SelectedIndex;
 
             cantidad = double.Parse(txtcantidadconversores.Text);
 
-            double[] monedas = {1, 0.92,7.86, 24.66, 8.75, 36.58, 535.14, 145.47, 0.79, 83.29};
+            double[] Area = {1, 0.09290304,0.698896 , 0.836127, 437.5, 7000, 10000 };
+            respuesta = Area [a] / Area[de] * cantidad;
 
-            respuesta = monedas[a] / monedas[de] * cantidad;
-
-            lblrespuestasconversores.Text = "Respuesta: " + Math.Round(  respuesta, 3 );
+            lblrespuestasconversores.Text = "Respuesta: " + Math.Round(  respuesta, 5);
 
 
+        }
+
+        private void lblcantidadconverores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalirParcial_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
